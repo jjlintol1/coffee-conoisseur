@@ -121,6 +121,7 @@ const CoffeeStore = (initialProps) => {
     <div className={styles.layout}>
       <Head>
         <title>{name}</title>
+        <meta name="description" content={`${name} coffee store`} />
       </Head>
       <div className={styles.container}>
         <div className={styles.col1}>
@@ -135,23 +136,23 @@ const CoffeeStore = (initialProps) => {
               imgUrl ||
               "https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
             }
+            alt="banner image"
             width={600}
             height={360}
             className={styles.storeImg}
-            alt={name}
           />
         </div>
         <div className={classNames("glass", styles.col2)}>
           <div className={styles.iconWrapper}>
-            <Image src="/static/icons/places.svg" width="24" height="24" />
+             <Image alt="places icon" src="/static/icons/places.svg" width="24" height="24" />
             <p className={styles.text}>{address}</p>
           </div>
           <div className={styles.iconWrapper}>
-            <Image src="/static/icons/nearMe.svg" width="24" height="24" />
+            <Image alt="near me icon" src="/static/icons/nearMe.svg" width="24" height="24" />
             <p className={styles.text}>{dma}</p>
           </div>
           <div className={styles.iconWrapper}>
-            <Image src="/static/icons/star.svg" width="24" height="24" />
+            <Image alt="star icon" src="/static/icons/star.svg" width="24" height="24" />
             <p className={styles.text}>{votingCount}</p>
           </div>
           <button className={styles.upvoteButton} onClick={handleUpvoteButton}>
